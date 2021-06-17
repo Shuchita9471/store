@@ -1,0 +1,44 @@
+.i1{
+    background-color: black;
+    color: white;
+}
+
+.i2{
+    background-color: black;
+    color: white;
+}
+
+.c1{
+    background-image: url(static/image/contact.jpg);
+    justify-content: center;
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-size: cover;
+
+}
+.c1::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0,0,0,.75);
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.c2{
+     background-color: gainsboro;
+     border-radius: 20px;
+     border-color: black;
+}
+
+.btn{
+     text-transform: uppercase;
+     font-weight: 500;
+    
+}
+
+
+

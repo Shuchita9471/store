@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+
+{% endblock title %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block body %}
+<div class="container-fluid px-0 mb-3 c1">
+    <div class="text-center">
+        <p>Feel free to contact.</p>
+    </div>
+</div>
+<div class="container mb-3 c2">
+    <h3 class="text-center">Contact us</h3>
+    <form method="post" action="/contact" >
+        {% csrf_token %}
+        <div class="mb-3 mx-4">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="enter your name">
+        </div>
+        <div class="mb-3 mx-4">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 mx-4">
+            <label for="phone" class="form-label">Contact no.</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="phone number">
+        </div>
+        <div class="mb-3 mx-4">
+            <label for="desc" class="form-label">Tell me what you want to contact me for</label>
+            <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+        </div>
+        <div class="text-center">
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock body %}
